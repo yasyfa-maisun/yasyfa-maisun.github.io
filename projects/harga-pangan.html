@@ -59,12 +59,14 @@
        <iframe> = menampilkan dashboard/video asli di dalam halaman. -->
   <main class="wrap">
 
-    <!-- UBAH: simpan grafik dari Colab sebagai assets/pangan-chart-1.png -->
+    <!-- GRAFIK 1: heatmap perubahan harga tahunan (file: assets/pangan-chart-1.png)
+         style="min-height:0; background:#fff" = kotak mengikuti tinggi gambar dan berlatar putih,
+         supaya tidak ada sisa warna navy di sekitar grafik -->
     <figure class="figure">
-      <div class="shot" data-label="Chart coming soon: price trend of red bird's-eye chili">
-        <img src="../assets/pangan-chart-1.png" alt="Price trend of red bird's-eye chili across six Java provinces">
+      <div class="shot" style="min-height:0;background:#fff" data-label="Heatmap of year-over-year price change">
+        <img src="../assets/pangan-chart-1.png" alt="Heatmap of year-over-year food price change in September 2026 by province and commodity">
       </div>
-      <figcaption>Price trend of red bird's-eye chili across six Java provinces.</figcaption>
+      <figcaption>Year-over-year price change in September 2026 by province and commodity (%). Red bird's-eye chili rose the most in every province.</figcaption>
     </figure>
 
     <section class="body-grid">
@@ -129,12 +131,12 @@
       </ol>
     </section>
 
-    <!-- UBAH: grafik kedua dari Colab, simpan sebagai assets/pangan-chart-2.png -->
+    <!-- GRAFIK 2: hubungan harga pangan dengan inflasi (file: assets/pangan-chart-2.png) -->
     <figure class="figure">
-      <div class="shot" data-label="Chart coming soon: correlation between food prices and inflation">
-        <img src="../assets/pangan-chart-2.png" alt="Correlation between food price changes and monthly inflation">
+      <div class="shot" style="min-height:0;background:#fff" data-label="Chart of food prices and inflation">
+        <img src="../assets/pangan-chart-2.png" alt="Line chart comparing monthly food price change with monthly inflation, 2024 to 2026">
       </div>
-      <figcaption>Spearman correlation between food price changes and monthly inflation.</figcaption>
+      <figcaption>Monthly food price change (average of six commodities) and monthly inflation move in the same direction (Spearman ρ = 0.54, average of six Java provinces).</figcaption>
     </figure>
 
     <section class="body-grid">
