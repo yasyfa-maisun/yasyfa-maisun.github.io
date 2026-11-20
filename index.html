@@ -13,7 +13,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yasyfa Maisun Majidah | Data Analyst</title>
-  <meta name="description" content="Portfolio of Yasyfa Maisun Majidah, a Data Analyst with a Mathematics background. Power BI, Excel, Python, SQL and Looker Studio projects.">
+  <meta name="description" content="Portfolio of Yasyfa Maisun Majidah, a Data Analyst specializing in sales and cost analytics with Power BI, Excel, Python, and SQL.">
+  <!-- Ikon kecil di tab browser (favicon) dan di layar utama HP (apple-touch-icon) -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Kartu pratinjau saat link dibagikan di LinkedIn / WhatsApp (Open Graph).
+       Alamat gambar & halaman harus lengkap (diawali https://) agar bisa dibaca aplikasi lain. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yasyfa Maisun Majidah | Data Analyst">
+  <meta property="og:description" content="Sales and cost analytics with Power BI, Excel, Python, and SQL. Portfolio of data analysis projects.">
+  <meta property="og:url" content="https://yasyfa-maisun.github.io/">
+  <meta property="og:image" content="https://yasyfa-maisun.github.io/assets/photo.jpg">
+  <meta property="og:image:alt" content="Portrait of Yasyfa Maisun Majidah">
+  <meta name="twitter:card" content="summary">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,7 +72,7 @@
           <div class="hero-text">
             <h1>Yasyfa Maisun Majidah</h1>
             <p class="role">Data Analyst</p>
-            <p class="intro">Mathematics graduate who turns raw data into clear dashboards and actionable insights, with hands-on experience in data cleaning, exploratory analysis, and business intelligence.</p>
+            <p class="intro">Data Analyst with a Mathematics background, specializing in sales and cost analytics. I turn scattered spreadsheets and raw data into clear dashboards and insights that help teams monitor performance against plan.</p>
             <div class="btn-row">
               <!-- UBAH: nama file CV harus sama persis dengan file di folder assets -->
               <a class="btn btn-primary" href="assets/CV_Yasyfa_Maisun_Majidah.pdf" target="_blank" rel="noopener">Download CV</a>
@@ -100,7 +115,7 @@
         <h2>About me</h2>
         <div class="about-text">
           <p>I'm a Mathematics graduate from Universitas Jenderal Soedirman with a strong foundation in statistics and quantitative reasoning. My undergraduate thesis in actuarial science, which calculated long-term care insurance premiums with a multi-state model, trained me to work carefully with numbers and assumptions.</p>
-          <p>Today I apply that rigor to business data. As a Data Analyst Intern at Traktor Nusantara, I clean and validate sales and cost data and build Power BI dashboards that update automatically. I enjoy the full analytics workflow, from messy spreadsheets to insights that help people make better decisions.</p>
+          <p>Today I apply that rigor to business data. At Traktor Nusantara, I replaced a heavy Excel report with an automated Power BI dashboard for sales, cost, and plan achievement. Beyond my internship, I've analyzed food price trends with statistical methods in Python and built sales dashboards in Looker Studio. I'm especially interested in FMCG, manufacturing, and infrastructure, where clear sales and cost monitoring drives everyday decisions.</p>
         </div>
       </div>
     </section>
@@ -119,10 +134,11 @@
               <h3>Data Analyst Intern</h3>
               <p class="org">Traktor Nusantara</p>
               <ul>
-                <li>Cleaned, validated, and standardized 73,000+ rows of sales data to ensure accuracy and consistency for analysis.</li>
-                <li>Performed exploratory data analysis in Excel (VLOOKUP, XLOOKUP, IF, IFERROR, SUMIFS) to combine data from multiple sources, handle errors, and summarize data by category.</li>
-                <li>Designed interactive dashboards in Power BI and Excel to identify sales patterns and trends.</li>
-                <li>Developed dashboard automation using sales master data, so reports update automatically when new data is added.</li>
+                <li>Rebuilt the sales and cost monitoring dashboard in Power BI, replacing an Excel dashboard that had become heavy and inefficient to use.</li>
+                <li>Automated data intake with Power Query: new data files added to a designated folder are combined and refreshed automatically, so reports stay current without growing a single Excel file.</li>
+                <li>Built views for actual vs. plan sales, total cost, and cost per branch, giving the team one place to monitor performance.</li>
+                <li>Cleaned, validated, and standardized 73,000+ rows of sales data to ensure accuracy and consistency.</li>
+                <li>Performed exploratory analysis in Excel (XLOOKUP, SUMIFS, IFERROR) to combine sources, handle errors, and summarize data by category.</li>
               </ul>
             </div>
           </li>
@@ -163,7 +179,7 @@
             </a>
             <div>
               <div class="project-title">
-                <h3>Food Price Changes in Java Island</h3>
+                <h3><a class="title-link" href="projects/harga-pangan.html">Food Price Changes in Java Island</a></h3>
               </div>
               <p>Analyzed 31,038 rows of daily food prices from Bank Indonesia's PIHPS across six commodities and six provinces, compared with BPS inflation data. Found that the 2026 spike was concentrated in red bird's-eye chili, at +91.5% year-over-year on average.</p>
               <ul class="tags"><li>Python</li><li>pandas</li><li>SciPy</li><li>Statistics</li></ul>
@@ -179,7 +195,7 @@
             </a>
             <div>
               <div class="project-title">
-                <h3>Furniture Sales Performance Dashboard</h3>
+                <h3><a class="title-link" href="projects/furniture.html">Furniture Sales Performance Dashboard</a></h3>
               </div>
               <p>End-to-end analysis of 10,000 furniture orders in Greater Jakarta (2025), from data cleaning to an interactive dashboard. It covers revenue, success and loss rates, and a statistical test of discount effectiveness.</p>
               <ul class="tags"><li>Python</li><li>Looker Studio</li><li>EDA</li><li>Hypothesis testing</li></ul>
@@ -195,7 +211,7 @@
             </a>
             <div>
               <div class="project-title">
-                <h3>Sales &amp; Cost Dashboard</h3>
+                <h3><a class="title-link" href="projects/powerbi-sales-cost.html">Sales &amp; Cost Dashboard</a></h3>
                 <span class="badge">Simulated data</span>
               </div>
               <p>A Power BI dashboard that monitors sales, cost, and gross profit across 16 branches using about 50,000 synthetic transactions, with plan-vs-actual tracking, a one-to-many data model, and custom DAX measures.</p>
@@ -212,7 +228,7 @@
             </a>
             <div>
               <div class="project-title">
-                <h3>Walmart Superstore Sales Performance Dashboard</h3>
+                <h3><a class="title-link" href="projects/walmart.html">Walmart Superstore Sales Performance Dashboard</a></h3>
               </div>
               <p>Analyzed retail sales and profit (USD 725.46K in sales, about 15% margin) across 686 unique customers, from Python EDA to an interactive Looker Studio dashboard. Identified sales concentration in California and Q4 seasonality.</p>
               <ul class="tags"><li>Python</li><li>Looker Studio</li><li>EDA</li><li>Retail analytics</li></ul>
@@ -238,7 +254,7 @@
             <p class="hint">What I use most in my current role</p>
             <ul class="skill-list">
               <li>Microsoft Excel<span>XLOOKUP, SUMIFS, data validation</span></li>
-              <li>Power BI<span>Power Query, DAX, data modeling</span></li>
+              <li>Power BI<span>Power Query (including automated folder-based data combining), DAX, data modeling</span></li>
             </ul>
           </div>
           <div class="skill-group">
@@ -264,7 +280,7 @@
         <div class="edu">
           <div class="edu-card">
             <h3>Universitas Jenderal Soedirman</h3>
-            <p class="meta">Mathematics, Aug 2022 – May 2026</p>
+            <p class="meta">B.Sc. in Mathematics, Aug 2022 – May 2026</p>
             <p><strong>GPA 3.67 / 4.00</strong></p>
             <p class="thesis">Thesis: Long-Term Care Health Insurance Premium Calculation Using a Multi-State Model</p>
           </div>
@@ -293,7 +309,7 @@
       <span class="deco deco-dot" aria-hidden="true"></span>
       <div class="wrap">
         <h2>Let's work together.</h2>
-        <p class="lead">I'm open to Data Analyst opportunities. Feel free to reach out by email or LinkedIn.</p>
+        <p class="lead">I'm open to Data Analyst roles in FMCG, manufacturing, and infrastructure. Feel free to reach out by email or LinkedIn.</p>
         <ul class="contact-list">
           <li><span>Email</span><a href="mailto:yasyfa.maisun01@gmail.com">yasyfa.maisun01@gmail.com</a></li>
           <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/yasyfa-maisun" target="_blank" rel="noopener">linkedin.com/in/yasyfa-maisun</a></li>
