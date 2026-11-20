@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Halaman detail proyek. File ini ada di folder projects/,
+       jadi alamat file lain diawali "../" (artinya: naik satu folder).
+       Contoh: ../style.css = file style.css di folder utama. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Furniture Sales Performance Dashboard | Yasyfa Maisun Majidah</title>
@@ -29,7 +32,10 @@
     </div>
   </header>
 
-  <main class="wrap">
+  <!-- ===== BAGIAN ATAS: link kembali, judul, ringkasan, label tools, tombol, 3 info singkat ===== -->
+  <div class="detail-top">
+    <span class="deco deco-circles" aria-hidden="true"></span>
+    <div class="wrap">
     <section class="detail-hero">
       <a class="back" href="../index.html#projects">Back to all projects</a>
       <h1>Furniture Sales Performance Dashboard</h1>
@@ -46,6 +52,13 @@
         <div><dt>Source</dt><dd>KarirNex bootcamp dataset</dd></div>
       </dl>
     </section>
+    </div>
+  </div>
+
+  <!-- ===== ISI CERITA PROYEK =====
+       <figure> = screenshot besar.  <section class="body-grid"> = judul kecil di kiri, isi di kanan.
+       <iframe> = menampilkan dashboard/video asli di dalam halaman. -->
+  <main class="wrap">
 
     <figure class="figure">
       <div class="shot" data-label="Dashboard screenshot">
@@ -100,7 +113,7 @@
         <div class="embed">
           <iframe src="https://lookerstudio.google.com/embed/reporting/03320642-d562-40de-b6f3-86a7dd2f709c" title="Furniture sales dashboard" loading="lazy" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
         </div>
-        <p style="color:var(--muted);font-size:14px;margin-top:10px">If the dashboard does not load here, <a href="https://datastudio.google.com/reporting/03320642-d562-40de-b6f3-86a7dd2f709c" target="_blank" rel="noopener">open it in Looker Studio</a>.</p>
+        <p class="small-note">If the dashboard does not load here, <a href="https://datastudio.google.com/reporting/03320642-d562-40de-b6f3-86a7dd2f709c" target="_blank" rel="noopener">open it in Looker Studio</a>.</p>
       </div>
     </section>
 

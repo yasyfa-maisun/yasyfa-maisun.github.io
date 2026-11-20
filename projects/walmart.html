@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Halaman detail proyek. File ini ada di folder projects/,
+       jadi alamat file lain diawali "../" (artinya: naik satu folder).
+       Contoh: ../style.css = file style.css di folder utama. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walmart Superstore Sales Dashboard | Yasyfa Maisun Majidah</title>
+  <meta name="description" content="Retail sales and profit analysis of the Walmart Superstore dataset with Python and Looker Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Yasyfa Maisun</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="menu">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== BAGIAN ATAS: link kembali, judul, ringkasan, label tools, tombol, 3 info singkat ===== -->
+  <div class="detail-top">
+    <span class="deco deco-circles" aria-hidden="true"></span>
+    <div class="wrap">
+    <section class="detail-hero">
+      <a class="back" href="../index.html#projects">Back to all projects</a>
+      <h1>Walmart Superstore Sales Performance Dashboard</h1>
+      <p class="lead">Where do sales and profit come from? An end-to-end look at sales performance, profit margins, and geographic distribution for a retail superstore.</p>
+      <ul class="tags"><li>Python</li><li>pandas</li><li>Matplotlib</li><li>Seaborn</li><li>Looker Studio</li></ul>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://datastudio.google.com/reporting/ff921755-8cb4-455b-964b-e55c94c9d055" target="_blank" rel="noopener">Open live dashboard</a>
+        <a class="btn btn-ghost" href="https://colab.research.google.com/drive/1vpkYmK_w0iem4f4X2OEbO-KtYo4fDSNd?usp=sharing" target="_blank" rel="noopener">Open notebook</a>
+        <a class="btn btn-ghost" href="https://github.com/yasyfa-maisun/walmart-superstore-sales-performance-dashboard" target="_blank" rel="noopener">GitHub repository</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Data</dt><dd>Walmart Superstore dataset</dd></div>
+        <div><dt>Customers</dt><dd>686 unique customers</dd></div>
+        <div><dt>Tools</dt><dd>Python, Looker Studio</dd></div>
+      </dl>
+    </section>
+    </div>
+  </div>
+
+  <!-- ===== ISI CERITA PROYEK =====
+       <figure> = screenshot besar.  <section class="body-grid"> = judul kecil di kiri, isi di kanan.
+       <iframe> = menampilkan dashboard/video asli di dalam halaman. -->
+  <main class="wrap">
+    <figure class="figure">
+      <div class="shot" data-label="Dashboard screenshot">
+        <img src="https://raw.githubusercontent.com/yasyfa-maisun/walmart-superstore-sales-performance-dashboard/main/WalmartSuperstore_SalesDashboard.png" alt="Walmart Superstore sales dashboard in Looker Studio">
+      </div>
+      <figcaption>Dashboard overview in Looker Studio.</figcaption>
+    </figure>
+
+    <section class="body-grid">
+      <h2>Dataset</h2>
+      <div>
+        <p>The Walmart Superstore dataset, with order-level fields including order ID, order date, customer name, city, state, category, sales, profit, and quantity.</p>
+      </div>
+    </section>
+
+    <section class="body-grid">
+      <h2>Method</h2>
+      <ul>
+        <li><strong>Data cleaning:</strong> converted date fields to datetime, checked for duplicates, and handled missing values.</li>
+        <li><strong>Customer count:</strong> counted distinct customers to avoid double-counting repeat buyers, giving 686 unique customers.</li>
+        <li><strong>Calculated fields:</strong> total sales and profit, the top 10 categories, and the top 5 cities by sales.</li>
+        <li><strong>Geographic breakdown:</strong> sales and profitability by state.</li>
+      </ul>
+    </section>
+
+    <section class="body-grid">
+      <h2>Headline metrics</h2>
+      <div class="metrics">
+        <div class="metric"><strong>$725.46K</strong><span>total sales</span></div>
+        <div class="metric"><strong>$108.42K</strong><span>total profit</span></div>
+        <div class="metric"><strong>~15%</strong><span>profit margin</span></div>
+        <div class="metric"><strong>686</strong><span>unique customers</span></div>
+      </div>
+    </section>
+
+    <section class="body-grid">
+      <h2>Findings and recommendations</h2>
+      <ol>
+        <li><strong>Sales are concentrated in California,</strong> which contributes about $458K of the $725.46K total and 72.5% of profit among the top three states. Recommendation: expand strategies to states such as Washington ($139K in sales).</li>
+        <li><strong>Sales peak at year-end.</strong> Monthly sales peak around September to December, at roughly $28K–$33K, and Q4 accounts for 36.5% of total profit. Recommendation: focus promotions and inventory planning on late Q3 and early Q4.</li>
+        <li><strong>Volume leaders are not the profit leaders.</strong> Chairs ($102K) and Phones ($99K) lead in sales, while Copiers generate the highest profit share among the top three categories (37.2%). Recommendation: keep Chairs and Phones steady while promoting Copiers.</li>
+        <li><strong>Repeat customers support profitability.</strong> With a margin of about 15% across 686 customers, loyalty programs can help protect revenue from repeat purchases.</li>
+      </ol>
+    </section>
+
+    <section class="body-grid">
+      <h2>Interactive dashboard</h2>
+      <div>
+        <!-- Tampil jika fitur "Embed report" di Looker Studio sudah diaktifkan -->
+        <div class="embed">
+          <iframe src="https://lookerstudio.google.com/embed/reporting/ff921755-8cb4-455b-964b-e55c94c9d055" title="Walmart Superstore sales dashboard" loading="lazy" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+        <p class="small-note">If the dashboard does not load here, <a href="https://datastudio.google.com/reporting/ff921755-8cb4-455b-964b-e55c94c9d055" target="_blank" rel="noopener">open it in Looker Studio</a>.</p>
+      </div>
+    </section>
+
+    <section class="next">
+      <span>Next project</span>
+      <a href="harga-pangan.html">Food Price Changes in Java Island</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year">2026</span> Yasyfa Maisun Majidah. Built with HTML, CSS, and JavaScript.</div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

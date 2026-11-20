@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Halaman detail proyek. File ini ada di folder projects/,
+       jadi alamat file lain diawali "../" (artinya: naik satu folder).
+       Contoh: ../style.css = file style.css di folder utama. -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Food Price Changes in Java Island | Yasyfa Maisun Majidah</title>
@@ -29,7 +32,10 @@
     </div>
   </header>
 
-  <main class="wrap">
+  <!-- ===== BAGIAN ATAS: link kembali, judul, ringkasan, label tools, tombol, 3 info singkat ===== -->
+  <div class="detail-top">
+    <span class="deco deco-circles" aria-hidden="true"></span>
+    <div class="wrap">
     <section class="detail-hero">
       <a class="back" href="../index.html#projects">Back to all projects</a>
       <h1>Food Price Changes in Java Island</h1>
@@ -45,6 +51,13 @@
         <div><dt>Sources</dt><dd>Bank Indonesia PIHPS, BPS</dd></div>
       </dl>
     </section>
+    </div>
+  </div>
+
+  <!-- ===== ISI CERITA PROYEK =====
+       <figure> = screenshot besar.  <section class="body-grid"> = judul kecil di kiri, isi di kanan.
+       <iframe> = menampilkan dashboard/video asli di dalam halaman. -->
+  <main class="wrap">
 
     <!-- UBAH: simpan grafik dari Colab sebagai assets/pangan-chart-1.png -->
     <figure class="figure">
@@ -102,7 +115,7 @@
             <tr><td>Medium I rice</td><td class="num">0.8</td><td class="num">+3.6%</td></tr>
           </tbody>
         </table>
-        <p style="color:var(--muted);font-size:14px;margin-top:10px">YoY is the average of six provinces.</p>
+        <p class="small-note">YoY is the average of six provinces.</p>
       </div>
     </section>
 
