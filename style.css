@@ -1,0 +1,31 @@
+/* Teks di antara tanda ini adalah komentar: catatan yang tidak dibaca browser */
+
+body {
+  background-color: #F8F6F1;   /* latar putih gading */
+  color: #1B2A41;              /* teks navy */
+  font-family: Georgia, serif; /* jenis huruf sementara */
+  max-width: 700px;            /* lebar maksimal isi */
+  margin: 80px auto;           /* jarak atas 80px, posisi di tengah */
+  padding: 0 24px;             /* jarak kiri-kanan, penting di HP */
+}
+
+h1 {
+  font-size: 44px;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;            /* jarak antarbaris agar nyaman dibaca */
+}
+
+a {
+  display: inline-block;
+  background-color: #E0A030;   /* tombol amber */
+  color: #1B2A41;
+  padding: 12px 24px;
+  border-radius: 8px;          /* sudut membulat */
+  text-decoration: none;       /* menghapus garis bawah link */
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+}  
