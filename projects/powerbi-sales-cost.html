@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales &amp; Cost Dashboard (Power BI) | Yasyfa Maisun Majidah</title>
+  <meta name="description" content="Power BI dashboard monitoring sales, cost, and gross profit across 16 branches using simulated data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Yasyfa Maisun</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="menu">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="detail-hero">
+      <a class="back" href="../index.html#projects">Back to all projects</a>
+      <span class="badge">Simulated data</span>
+      <h1>Sales &amp; Cost Dashboard</h1>
+      <p class="lead">Managers need a concise view of sales achievement, cost structure, and gross profit to compare branches and track sales against targets.</p>
+      <ul class="tags"><li>Power BI</li><li>Power Query</li><li>DAX</li><li>Python</li><li>Excel</li></ul>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/1qccLZiU0eI-9B3yTfZ3E3Z9def4ZNL9K/view" target="_blank" rel="noopener">Watch demo</a>
+        <a class="btn btn-ghost" href="https://github.com/yasyfa-maisun/powerbi-sales-cost-dashboard" target="_blank" rel="noopener">GitHub repository</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Data</dt><dd>~50,000 synthetic transactions</dd></div>
+        <div><dt>Scope</dt><dd>16 branches, 2 directories</dd></div>
+        <div><dt>Period</dt><dd>Jan – Dec 2026</dd></div>
+      </dl>
+    </section>
+
+    <figure class="figure">
+      <div class="shot" data-label="Dashboard screenshot">
+        <img src="https://raw.githubusercontent.com/yasyfa-maisun/powerbi-sales-cost-dashboard/main/Dashboard-Sales-Cost.png" alt="Sales and cost dashboard in Power BI">
+      </div>
+      <figcaption>Dashboard overview in Power BI Desktop.</figcaption>
+    </figure>
+
+    <section class="body-grid">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Compare actual sales with targets for each period.</li>
+        <li>Measure total cost, gross profit, and gross profit margin.</li>
+        <li>Compare performance across branches and directories.</li>
+        <li>Show the composition of costs and job types.</li>
+      </ul>
+    </section>
+
+    <section class="body-grid">
+      <h2>Dataset</h2>
+      <div>
+        <p>All data was generated in Python and contains no real organizational data, names, or figures. It includes about 50,000 transaction rows for January to December 2026, 16 branches grouped into two directories, and monthly sales targets per branch.</p>
+      </div>
+    </section>
+
+    <section class="body-grid">
+      <h2>How I built it</h2>
+      <ol>
+        <li><strong>Data modeling:</strong> Directory is the dimension table. Sales and Plan are fact tables, connected through Branch in a one-to-many relationship.</li>
+        <li><strong>Power Query:</strong> Plan data was unpivoted from wide to long format, and month numbers were derived from Indonesian month names so the result does not depend on system language.</li>
+        <li><strong>DAX measures:</strong> Total Sales, Total Cost, GP Amount, and GP %.</li>
+        <li><strong>Visual design:</strong> KPI cards at the top, trends in the middle, and branch analysis at the bottom.</li>
+      </ol>
+    </section>
+
+    <section class="body-grid">
+      <h2>Dashboard features</h2>
+      <ul>
+        <li>KPI cards: Total Sales, Plan, Total Cost, GP Amount, GP %.</li>
+        <li>Plan vs. actual sales trend.</li>
+        <li>Job type proportions and cost and GP composition.</li>
+        <li>Branch profitability analysis.</li>
+        <li>Filters for directory, branch, and period.</li>
+      </ul>
+    </section>
+
+    <section class="body-grid">
+      <h2>Demo</h2>
+      <div>
+        <div class="embed">
+          <iframe src="https://drive.google.com/file/d/1qccLZiU0eI-9B3yTfZ3E3Z9def4ZNL9K/preview" title="Power BI dashboard demo video" loading="lazy" allow="autoplay" allowfullscreen></iframe>
+        </div>
+        <p style="color:var(--muted);font-size:14px;margin-top:10px">If the video does not play here, <a href="https://drive.google.com/file/d/1qccLZiU0eI-9B3yTfZ3E3Z9def4ZNL9K/view" target="_blank" rel="noopener">watch it on Google Drive</a>.</p>
+      </div>
+    </section>
+
+    <section class="body-grid">
+      <h2>A note on the data</h2>
+      <p class="note">Because the data is simulated, the patterns are not real business findings. This project shows how I design and build a dashboard. It reflects the type of work I do in my internship, without using any company data.</p>
+    </section>
+
+    <section class="next">
+      <span>Next project</span>
+      <a href="harga-pangan.html">Food Price Changes in Java Island</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year">2026</span> Yasyfa Maisun Majidah. Built with HTML, CSS, and JavaScript.</div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

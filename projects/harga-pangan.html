@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Price Changes in Java Island | Yasyfa Maisun Majidah</title>
+  <meta name="description" content="Analysis of six food commodity prices across six Java provinces (Dec 2023 – Sep 2026) and their relationship with monthly inflation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Yasyfa Maisun</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="menu">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="detail-hero">
+      <a class="back" href="../index.html#projects">Back to all projects</a>
+      <h1>Food Price Changes in Java Island</h1>
+      <p class="lead">How did six strategic food prices move across Java between December 2023 and September 2026, and do they move with inflation?</p>
+      <ul class="tags"><li>Python</li><li>pandas</li><li>NumPy</li><li>SciPy</li><li>Matplotlib</li><li>Google Colab</li></ul>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://colab.research.google.com/drive/19QE4zUCXKTi_YnwAH7DSXmxFO-MZnDaU?usp=sharing" target="_blank" rel="noopener">Open notebook</a>
+        <a class="btn btn-ghost" href="https://github.com/yasyfa-maisun/analisis-harga-pangan" target="_blank" rel="noopener">GitHub repository</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Data</dt><dd>31,038 daily price rows</dd></div>
+        <div><dt>Period</dt><dd>Dec 2023 – Sep 2026</dd></div>
+        <div><dt>Sources</dt><dd>Bank Indonesia PIHPS, BPS</dd></div>
+      </dl>
+    </section>
+
+    <!-- UBAH: simpan grafik dari Colab sebagai assets/pangan-chart-1.png -->
+    <figure class="figure">
+      <div class="shot" data-label="Chart coming soon: price trend of red bird's-eye chili">
+        <img src="../assets/pangan-chart-1.png" alt="Price trend of red bird's-eye chili across six Java provinces">
+      </div>
+      <figcaption>Price trend of red bird's-eye chili across six Java provinces.</figcaption>
+    </figure>
+
+    <section class="body-grid">
+      <h2>Problem</h2>
+      <div>
+        <p>Food price spikes hit households directly. This project compares price movements of six strategic food commodities across six Java provinces with monthly inflation, and asks three questions:</p>
+        <ol>
+          <li>Which commodities and provinces were hit hardest by food price spikes in 2026?</li>
+          <li>Was the September 2026 price high compared with each province's own normal range, not just the previous year?</li>
+          <li>Do food price changes relate to monthly inflation?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="body-grid">
+      <h2>Dataset</h2>
+      <ul>
+        <li><strong>Commodities:</strong> medium I rice, chicken meat, chicken eggs, shallots, red curly chili, red bird's-eye chili.</li>
+        <li><strong>Provinces:</strong> Banten, DKI Jakarta, West Java, Central Java, DI Yogyakarta, East Java.</li>
+        <li><strong>Prices:</strong> daily prices (working days) from 1 Dec 2023 to 30 Sep 2026, sourced from Bank Indonesia PIHPS, totaling 31,038 rows in long format.</li>
+        <li><strong>Inflation:</strong> monthly city-level inflation from BPS, Jan 2024 – Aug 2026, with 38 cities mapped to provinces.</li>
+      </ul>
+    </section>
+
+    <section class="body-grid">
+      <h2>Method</h2>
+      <ul>
+        <li><strong>Data cleaning:</strong> automatic cleaning of text dates and "Rp"-formatted prices. Small gaps were forward-filled up to 3 days (92 cells), leaving no missing values. Outliers more than 50% away from the 15-day rolling median were flagged but not removed.</li>
+        <li><strong>Volatility:</strong> standard deviation of month-over-month changes, Sep 2025 – Sep 2026.</li>
+        <li><strong>Year-over-year change and historical position:</strong> percent difference from median, z-score, and percentile per province.</li>
+        <li><strong>Link to inflation:</strong> Spearman correlation for each commodity and province pair, a combined six-commodity index, and a one-month lag test.</li>
+      </ul>
+    </section>
+
+    <section class="body-grid">
+      <h2>Volatility and yearly change</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Commodity</th><th class="num">Volatility (SD of MoM, pp)</th><th class="num">YoY Sep 2026</th></tr>
+          </thead>
+          <tbody>
+            <tr class="hl"><td>Red bird's-eye chili</td><td class="num">36.2</td><td class="num">+91.5%</td></tr>
+            <tr><td>Red curly chili</td><td class="num">20.1</td><td class="num">−8.9%</td></tr>
+            <tr><td>Shallots</td><td class="num">12.4</td><td class="num">−14.9%</td></tr>
+            <tr><td>Chicken meat</td><td class="num">8.0</td><td class="num">+6.8%</td></tr>
+            <tr><td>Chicken eggs</td><td class="num">4.3</td><td class="num">−8.0%</td></tr>
+            <tr><td>Medium I rice</td><td class="num">0.8</td><td class="num">+3.6%</td></tr>
+          </tbody>
+        </table>
+        <p style="color:var(--muted);font-size:14px;margin-top:10px">YoY is the average of six provinces.</p>
+      </div>
+    </section>
+
+    <section class="body-grid">
+      <h2>Key findings</h2>
+      <ol>
+        <li><strong>The 2026 spike was concentrated in red bird's-eye chili,</strong> at +91.5% YoY on average. The highest rises were in East Java (+117.2%), DI Yogyakarta (+113.5%), and Central Java (+97.7%). Part of the YoY figure reflects a low September 2025 base.</li>
+        <li><strong>The chili price was high, but within its normal range.</strong> It sat 21.6% to 35.9% above the provincial median, with z-scores of 0.6–0.8 (74th–79th percentile).</li>
+        <li><strong>Chicken meat and rice rose gradually rather than spiking.</strong> Their z-scores were 1.2–2.0, near the period's highest levels, while monthly changes in September 2026 were small.</li>
+        <li><strong>Food prices move with same-month inflation, but do not predict next month's inflation.</strong> The combined index correlated 0.53–0.58 with inflation across all provinces (p &lt; 0.01). With a one-month lag, none of the 36 pairs was significant.</li>
+      </ol>
+    </section>
+
+    <!-- UBAH: grafik kedua dari Colab, simpan sebagai assets/pangan-chart-2.png -->
+    <figure class="figure">
+      <div class="shot" data-label="Chart coming soon: correlation between food prices and inflation">
+        <img src="../assets/pangan-chart-2.png" alt="Correlation between food price changes and monthly inflation">
+      </div>
+      <figcaption>Spearman correlation between food price changes and monthly inflation.</figcaption>
+    </figure>
+
+    <section class="body-grid">
+      <h2>Limitations</h2>
+      <ul>
+        <li>Provincial inflation is a simple average of city figures, not the official BPS provincial figure.</li>
+        <li>Inflation data ends in August 2026, so the September 2026 spike cannot be compared with inflation.</li>
+        <li>Correlation does not imply causation, and drivers such as exchange rates and weather were not analyzed.</li>
+      </ul>
+    </section>
+
+    <section class="next">
+      <span>Next project</span>
+      <a href="furniture.html">Furniture Sales Performance Dashboard</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year">2026</span> Yasyfa Maisun Majidah. Built with HTML, CSS, and JavaScript.</div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

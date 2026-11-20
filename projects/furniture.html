@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Furniture Sales Performance Dashboard | Yasyfa Maisun Majidah</title>
+  <meta name="description" content="End-to-end analysis of 10,000 furniture orders in Greater Jakarta (2025) with Python and Looker Studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html">Yasyfa Maisun</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="menu">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#education">Education</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="detail-hero">
+      <a class="back" href="../index.html#projects">Back to all projects</a>
+      <h1>Furniture Sales Performance Dashboard</h1>
+      <p class="lead">A furniture retailer in Greater Jakarta needs a clear view of its 2025 performance: where revenue comes from, which products drive it, and whether discounts work.</p>
+      <ul class="tags"><li>Python</li><li>pandas</li><li>Seaborn</li><li>SciPy</li><li>Looker Studio</li></ul>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="https://datastudio.google.com/reporting/03320642-d562-40de-b6f3-86a7dd2f709c" target="_blank" rel="noopener">Open live dashboard</a>
+        <a class="btn btn-ghost" href="https://colab.research.google.com/drive/1s2exixziYlSof0mL4qfUJadUOzHcvFYi?usp=sharing" target="_blank" rel="noopener">Open notebook</a>
+        <a class="btn btn-ghost" href="https://github.com/yasyfa-maisun/furniture-sales-dashboard" target="_blank" rel="noopener">GitHub repository</a>
+      </div>
+      <dl class="facts">
+        <div><dt>Data</dt><dd>10,000 orders</dd></div>
+        <div><dt>Period</dt><dd>Jan – Dec 2025</dd></div>
+        <div><dt>Source</dt><dd>KarirNex bootcamp dataset</dd></div>
+      </dl>
+    </section>
+
+    <figure class="figure">
+      <div class="shot" data-label="Dashboard screenshot">
+        <img src="https://raw.githubusercontent.com/yasyfa-maisun/furniture-sales-dashboard/main/Furniture_Sales_Dashboard.png" alt="Furniture sales dashboard in Looker Studio">
+      </div>
+      <figcaption>Dashboard overview in Looker Studio.</figcaption>
+    </figure>
+
+    <section class="body-grid">
+      <h2>Objectives</h2>
+      <ul>
+        <li>Analyze overall sales performance.</li>
+        <li>Examine sales distribution by city.</li>
+        <li>Understand the product category mix.</li>
+        <li>Evaluate whether discounts are effective.</li>
+      </ul>
+    </section>
+
+    <section class="body-grid">
+      <h2>Method</h2>
+      <ul>
+        <li><strong>Cleaning:</strong> date conversion, duplicate and missing-value checks, and trimming spaces in city names.</li>
+        <li><strong>Revenue basis:</strong> only completed orders count as revenue. Cancelled and refunded orders feed the success and loss rate metrics.</li>
+        <li><strong>Promo analysis:</strong> a comparison of discounted and non-discounted orders using Welch's t-test.</li>
+      </ul>
+    </section>
+
+    <section class="body-grid">
+      <h2>Headline metrics</h2>
+      <div class="metrics">
+        <div class="metric"><strong>Rp47.48B</strong><span>completed revenue from 8,972 orders</span></div>
+        <div class="metric"><strong>Rp5.29M</strong><span>average order value</span></div>
+        <div class="metric"><strong>89.7%</strong><span>success rate</span></div>
+        <div class="metric"><strong>10.3%</strong><span>loss rate</span></div>
+      </div>
+    </section>
+
+    <section class="body-grid">
+      <h2>Findings and recommendations</h2>
+      <ol>
+        <li><strong>Revenue is evenly spread across cities.</strong> Each city accounts for 9.1% to 10.7% of revenue. Recommendation: focus growth on lower-revenue cities such as Bekasi and Tangerang.</li>
+        <li><strong>Three categories dominate.</strong> Bedroom (36.9%), Living Room (26.1%), and Kitchen (19.8%) together make up about 82.8% of revenue. Recommendation: test product bundles to lift the smaller categories.</li>
+        <li><strong>Order failures are costly.</strong> 519 cancelled and 509 refunded orders were worth about Rp5.55B, and loss rates were highest in Bekasi (12.3%). Recommendation: investigate product quality, delivery, and stock availability.</li>
+        <li><strong>The 10% discount did not raise quantity.</strong> Average quantity was 2.04 for promo orders vs. 1.99 for non-promo (p ≈ 0.33, not significant), and promo order value was about 12% lower. Recommendation: run controlled tests at several discount levels before expanding promotions.</li>
+      </ol>
+    </section>
+
+    <section class="body-grid">
+      <h2>Interactive dashboard</h2>
+      <div>
+        <!-- Tampil jika fitur "Embed report" di Looker Studio sudah diaktifkan -->
+        <div class="embed">
+          <iframe src="https://lookerstudio.google.com/embed/reporting/03320642-d562-40de-b6f3-86a7dd2f709c" title="Furniture sales dashboard" loading="lazy" allowfullscreen sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"></iframe>
+        </div>
+        <p style="color:var(--muted);font-size:14px;margin-top:10px">If the dashboard does not load here, <a href="https://datastudio.google.com/reporting/03320642-d562-40de-b6f3-86a7dd2f709c" target="_blank" rel="noopener">open it in Looker Studio</a>.</p>
+      </div>
+    </section>
+
+    <section class="body-grid">
+      <h2>Limitations</h2>
+      <ul>
+        <li>Only one year of data, so seasonal patterns are not yet confirmed.</li>
+        <li>Only 318 promo orders at a single discount level, so discount conclusions are indicative.</li>
+        <li>No data on cancellation reasons or product costs, so profit could not be analyzed.</li>
+      </ul>
+    </section>
+
+    <section class="next">
+      <span>Next project</span>
+      <a href="powerbi-sales-cost.html">Sales &amp; Cost Dashboard (Power BI)</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year">2026</span> Yasyfa Maisun Majidah. Built with HTML, CSS, and JavaScript.</div>
+  </footer>
+  <script src="../script.js"></script>
+</body>
+</html>

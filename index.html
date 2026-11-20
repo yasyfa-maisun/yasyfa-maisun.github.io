@@ -4,11 +4,260 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yasyfa Maisun Majidah | Data Analyst</title>
-    <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio of Yasyfa Maisun Majidah, a Data Analyst with a Mathematics background. Power BI, Excel, Python, SQL and Looker Studio projects.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, I'm Yasyfa</h1>
-  <p>Data Analyst. My portfolio website is coming soon.</p>
-  <a href="https://github.com/yasyfa-maisun">Visit my GitHub</a>
+
+  <!-- ===== NAVIGASI ===== -->
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="#top">Yasyfa Maisun</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <h1>Yasyfa Maisun Majidah</h1>
+            <p class="role">Data Analyst</p>
+            <p class="intro">Mathematics graduate who turns raw data into clear dashboards and actionable insights, with hands-on experience in data cleaning, exploratory analysis, and business intelligence.</p>
+            <div class="btn-row">
+              <!-- UBAH: nama file CV harus sama persis dengan file di folder assets -->
+              <a class="btn btn-primary" href="assets/CV_Yasyfa_Maisun_Majidah.pdf" target="_blank" rel="noopener">Download CV</a>
+              <a class="btn btn-ghost" href="#projects">View projects</a>
+            </div>
+          </div>
+
+          <!-- Panel foto. UBAH: taruh fotomu di assets/photo.jpg -->
+          <div class="portrait" id="portrait">
+            <svg class="grid-bg" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true">
+              <g stroke="rgba(255,255,255,.08)" stroke-width="1">
+                <line x1="0" y1="100" x2="400" y2="100"/><line x1="0" y1="200" x2="400" y2="200"/>
+                <line x1="0" y1="300" x2="400" y2="300"/><line x1="0" y1="400" x2="400" y2="400"/>
+                <line x1="100" y1="0" x2="100" y2="500"/><line x1="200" y1="0" x2="200" y2="500"/>
+                <line x1="300" y1="0" x2="300" y2="500"/>
+              </g>
+            </svg>
+            <span class="monogram" aria-hidden="true">YM</span>
+            <img src="assets/photo.jpg" alt="Portrait of Yasyfa Maisun Majidah">
+            <svg class="chart-line" viewBox="0 0 400 500" preserveAspectRatio="none" aria-hidden="true">
+              <path d="M-10 430 L60 400 L120 412 L180 350 L240 368 L300 290 L360 250 L410 214" fill="none" stroke="#E0A23B" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+              <circle cx="360" cy="250" r="8" fill="#E0A23B" stroke="#14254A" stroke-width="3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Angka utama -->
+        <div class="stats">
+          <div class="stat"><strong>73,000+</strong><span>rows of sales data cleaned and validated</span></div>
+          <div class="stat"><strong>31,000+</strong><span>rows of food price data analyzed</span></div>
+          <div class="stat"><strong>10,000</strong><span>sales orders analyzed end-to-end</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="wrap split">
+        <h2>About me</h2>
+        <div class="about-text">
+          <p>I'm a Mathematics graduate from Universitas Jenderal Soedirman with a strong foundation in statistics and quantitative reasoning. My undergraduate thesis in actuarial science, which calculated long-term care insurance premiums with a multi-state model, trained me to work carefully with numbers and assumptions.</p>
+          <p>Today I apply that rigor to business data. As a Data Analyst Intern at Traktor Nusantara, I clean and validate sales and cost data and build Power BI dashboards that update automatically. I enjoy the full analytics workflow, from messy spreadsheets to insights that help people make better decisions.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section" id="experience" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><h2>Experience</h2></div>
+        <ol class="timeline">
+          <li class="job">
+            <div class="when">Aug 2026 – Present<br><span class="now">Current role</span></div>
+            <div>
+              <h3>Data Analyst Intern</h3>
+              <p class="org">Traktor Nusantara</p>
+              <ul>
+                <li>Cleaned, validated, and standardized 73,000+ rows of sales data to ensure accuracy and consistency for analysis.</li>
+                <li>Performed exploratory data analysis in Excel (VLOOKUP, XLOOKUP, IF, IFERROR, SUMIFS) to combine data from multiple sources, handle errors, and summarize data by category.</li>
+                <li>Designed interactive dashboards in Power BI and Excel to identify sales patterns and trends.</li>
+                <li>Developed dashboard automation using sales master data, so reports update automatically when new data is added.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="job">
+            <div class="when">Jul 2024</div>
+            <div>
+              <h3>Data Analyst Intern</h3>
+              <p class="org">BPS-Statistics Banyumas Regency</p>
+              <ul>
+                <li>Filtered and validated national agricultural datasets into regency-level sectoral data for official publications.</li>
+                <li>Processed and entered data for 100+ companies in Banyumas Regency.</li>
+                <li>Designed publication layout templates for <em>Kecamatan Dalam Angka</em> (Subdistrict in Figures).</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section class="section projects-band" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Featured projects</h2>
+          <p>Each project includes the full story: the question, the data, the method, and what I found.</p>
+        </div>
+
+        <!-- Proyek 1 -->
+        <article class="project">
+          <!-- UBAH: simpan grafik dari Colab sebagai assets/pangan-chart-1.png -->
+          <a class="shot" href="projects/harga-pangan.html" data-label="Chart preview coming soon">
+            <img src="assets/pangan-chart-1.png" alt="Chart of food price changes in Java Island" loading="lazy">
+          </a>
+          <div>
+            <h3>Food Price Changes in Java Island</h3>
+            <p>Analyzed 31,038 rows of daily food prices from Bank Indonesia's PIHPS across six commodities and six provinces, compared with BPS inflation data. Found that the 2026 spike was concentrated in red bird's-eye chili, at +91.5% year-over-year on average.</p>
+            <ul class="tags"><li>Python</li><li>pandas</li><li>SciPy</li><li>Statistics</li></ul>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="projects/harga-pangan.html">View details</a>
+              <a class="btn btn-ghost" href="https://github.com/yasyfa-maisun/analisis-harga-pangan" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyek 2 -->
+        <article class="project">
+          <a class="shot" href="projects/furniture.html" data-label="Dashboard preview">
+            <img src="https://raw.githubusercontent.com/yasyfa-maisun/furniture-sales-dashboard/main/Furniture_Sales_Dashboard.png" alt="Furniture sales dashboard in Looker Studio" loading="lazy">
+          </a>
+          <div>
+            <h3>Furniture Sales Performance Dashboard</h3>
+            <p>End-to-end analysis of 10,000 furniture orders in Greater Jakarta (2025), from data cleaning to an interactive dashboard. It covers revenue, success and loss rates, and a statistical test of discount effectiveness.</p>
+            <ul class="tags"><li>Python</li><li>Looker Studio</li><li>EDA</li><li>Hypothesis testing</li></ul>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="projects/furniture.html">View details</a>
+              <a class="btn btn-ghost" href="https://github.com/yasyfa-maisun/furniture-sales-dashboard" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyek 3 -->
+        <article class="project">
+          <a class="shot" href="projects/powerbi-sales-cost.html" data-label="Dashboard preview">
+            <img src="https://raw.githubusercontent.com/yasyfa-maisun/powerbi-sales-cost-dashboard/main/Dashboard-Sales-Cost.png" alt="Sales and cost dashboard in Power BI" loading="lazy">
+          </a>
+          <div>
+            <span class="badge">Simulated data</span>
+            <h3>Sales &amp; Cost Dashboard</h3>
+            <p>A Power BI dashboard that monitors sales, cost, and gross profit across 16 branches using about 50,000 synthetic transactions, with plan-vs-actual tracking, a one-to-many data model, and custom DAX measures.</p>
+            <ul class="tags"><li>Power BI</li><li>Power Query</li><li>DAX</li><li>Data modeling</li></ul>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="projects/powerbi-sales-cost.html">View details</a>
+              <a class="btn btn-ghost" href="https://github.com/yasyfa-maisun/powerbi-sales-cost-dashboard" target="_blank" rel="noopener">GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section" id="skills">
+      <div class="wrap">
+        <div class="section-head"><h2>Skills &amp; tools</h2></div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Daily tools</h3>
+            <p class="hint">What I use most in my current role</p>
+            <ul class="skill-list">
+              <li>Microsoft Excel<span>XLOOKUP, SUMIFS, data validation</span></li>
+              <li>Power BI<span>Power Query, DAX, data modeling</span></li>
+            </ul>
+          </div>
+          <div class="skill-group">
+            <h3>Project experience</h3>
+            <p class="hint">Used in projects and training</p>
+            <ul class="skill-list">
+              <li>Python<span>pandas, Matplotlib, Seaborn, SciPy in Google Colab</span></li>
+              <li>SQL<span>Google BigQuery</span></li>
+              <li>Looker Studio<span>Interactive dashboards</span></li>
+              <li>Google Apps Script</li>
+            </ul>
+          </div>
+        </div>
+        <p class="core"><strong>Core competencies:</strong> data cleaning, exploratory data analysis, basic statistics, data visualization, dashboard automation, analytical reporting.</p>
+      </div>
+    </section>
+
+    <!-- ===== EDUCATION ===== -->
+    <section class="section" id="education" style="padding-top:0">
+      <div class="wrap">
+        <div class="section-head"><h2>Education &amp; training</h2></div>
+        <div class="edu">
+          <div class="edu-card">
+            <h3>Universitas Jenderal Soedirman</h3>
+            <p class="meta">B.Sc. in Mathematics, Aug 2022 – May 2026</p>
+            <p><strong>GPA 3.67 / 4.00</strong></p>
+            <p class="thesis">Thesis: Long-Term Care Health Insurance Premium Calculation Using a Multi-State Model</p>
+          </div>
+          <div class="edu-card">
+            <h3>Training</h3>
+            <div class="cert">
+              <strong>Data Analyst Training for BNSP Certification Preparation</strong>
+              <span>YEC, Jul 2026</span><br>
+              <a href="https://drive.google.com/file/d/1APTzsdHQ2amkZT1lokO8OsX64PUAMsH6/view" target="_blank" rel="noopener">View certificate</a>
+            </div>
+            <div class="cert">
+              <strong>Data Analyst Bootcamp</strong>
+              <span>KarirNex, Jul 2026</span><br>
+              <a href="https://drive.google.com/file/d/1Qld9h3552ZGeGXqREdQhIK-iz0-v1H4y/view" target="_blank" rel="noopener">View certificate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <h2>Let's work together.</h2>
+        <p class="lead">I'm open to Data Analyst opportunities. Feel free to reach out by email or LinkedIn.</p>
+        <ul class="contact-list">
+          <li><span>Email</span><a href="mailto:yasyfa.maisun01@gmail.com">yasyfa.maisun01@gmail.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/yasyfa-maisun" target="_blank" rel="noopener">linkedin.com/in/yasyfa-maisun</a></li>
+          <li><span>GitHub</span><a href="https://github.com/yasyfa-maisun" target="_blank" rel="noopener">github.com/yasyfa-maisun</a></li>
+        </ul>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="mailto:yasyfa.maisun01@gmail.com">Send an email</a>
+          <a class="btn btn-ghost" href="assets/CV_Yasyfa_Maisun_Majidah.pdf" target="_blank" rel="noopener">Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">© <span id="year">2026</span> Yasyfa Maisun Majidah. Built with HTML, CSS, and JavaScript.</div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
